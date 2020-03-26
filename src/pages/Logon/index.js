@@ -9,16 +9,16 @@ import './styles.css';
 import logoImg from '../../assets/logo.svg';
 import heroesImg from '../../assets/heroes.png';
 
-export default function logon() {
+export default function Logon() {
     const [id, setId] = useState('');
 
     const history = useHistory();
 
-    function handleLogin(e) {
+    async function handleLogin(e) {
         e.preventDefault();
 
         try {
-            const response = await api.post('sessions', {id});
+            const response = await api.post('session', {id});
 
             localStorage.setItem('ongId', id);
             localStorage.setItem('ongName', response.data.name);

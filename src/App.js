@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 //import Header from './Header';
 import './global.css';
-import Logon from './pages/Logon';
+import Routes from './routes';
 
 function App() {
   // const [counter, setCounter] = useState(0);
@@ -18,7 +18,7 @@ function App() {
   // );
   return (
     <div>
-      <Logon />
+      <Routes />
     </div>
   )  
 }
